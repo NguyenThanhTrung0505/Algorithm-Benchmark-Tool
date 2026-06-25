@@ -1,0 +1,9 @@
+namespace Algorithm_Benchmark_Tool
+{
+    [default_interface]
+    runtimeclass AlgorithmCardControl : Microsoft.UI.Xaml.Controls.UserControl
+    {
+        AlgorithmCardControl();
+        Int32 MyProperty;
+    }
+}

@@ -1,0 +1,9 @@
+namespace Algorithm_Benchmark_Tool
+{
+    [default_interface]
+    runtimeclass AnalyticsChartControl : Microsoft.UI.Xaml.Controls.UserControl
+    {
+        AnalyticsChartControl();
+        Int32 MyProperty;
+    }
+}

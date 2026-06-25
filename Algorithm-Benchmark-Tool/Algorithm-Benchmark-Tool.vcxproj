@@ -118,6 +118,18 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AlgorithmCardControl.xaml.h">
+      <DependentUpon>AlgorithmCardControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="AnalyticsChartControl.xaml.h">
+      <DependentUpon>AnalyticsChartControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="HeaderControl.xaml.h">
+      <DependentUpon>HeaderControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -125,12 +137,40 @@
     <ClInclude Include="MainWindow.xaml.h">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="SidebarControl.xaml.h">
+      <DependentUpon>SidebarControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
+    <Page Include="AlgorithmCardControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AnalyticsChartControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HeaderControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml" />
+    <Page Include="SidebarControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlgorithmCardControl.xaml.cpp">
+      <DependentUpon>AlgorithmCardControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="AnalyticsChartControl.xaml.cpp">
+      <DependentUpon>AnalyticsChartControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="HeaderControl.xaml.cpp">
+      <DependentUpon>HeaderControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -141,11 +181,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="SidebarControl.xaml.cpp">
+      <DependentUpon>SidebarControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Midl Include="AlgorithmCardControl.idl">
+      <DependentUpon>AlgorithmCardControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="AnalyticsChartControl.idl">
+      <DependentUpon>AnalyticsChartControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
+    <Midl Include="HeaderControl.idl">
+      <DependentUpon>HeaderControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Midl>
+    <Midl Include="SidebarControl.idl">
+      <DependentUpon>SidebarControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Midl>
   </ItemGroup>
   <ItemGroup>
@@ -235,7 +295,7 @@
     <Error Condition="!Exists('..\packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.SDK.BuildTools.10.0.28000.1839\build\Microsoft.Windows.SDK.BuildTools.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Windows.ImplementationLibrary.1.0.260126.7\build\native\Microsoft.Windows.ImplementationLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Windows.ImplementationLibrary.1.0.260126.7\build\native\Microsoft.Windows.ImplementationLibrary.targets'))" />
   </Target>
-	<PropertyGroup>
-		<SDKReferenceDirectoryRoot>D:\Program Files (x86)\Windows Kits\10\Extension SDKs</SDKReferenceDirectoryRoot>
-	</PropertyGroup>
+  <PropertyGroup>
+    <SDKReferenceDirectoryRoot>D:\Program Files (x86)\Windows Kits\10\Extension SDKs</SDKReferenceDirectoryRoot>
+  </PropertyGroup>
 </Project>

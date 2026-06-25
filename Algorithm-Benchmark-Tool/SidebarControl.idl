@@ -1,0 +1,9 @@
+namespace Algorithm_Benchmark_Tool
+{
+    [default_interface]
+    runtimeclass SidebarControl : Microsoft.UI.Xaml.Controls.UserControl
+    {
+        SidebarControl();
+        Int32 MyProperty;
+    }
+}
