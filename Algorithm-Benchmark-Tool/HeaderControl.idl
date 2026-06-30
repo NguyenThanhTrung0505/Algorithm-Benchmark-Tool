@@ -4,6 +4,5 @@ namespace Algorithm_Benchmark_Tool
     runtimeclass HeaderControl : Microsoft.UI.Xaml.Controls.UserControl
     {
         HeaderControl();
-        Int32 MyProperty;
     }
 }

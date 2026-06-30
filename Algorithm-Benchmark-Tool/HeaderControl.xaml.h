@@ -6,14 +6,12 @@ namespace winrt::Algorithm_Benchmark_Tool::implementation
 {
     struct HeaderControl : HeaderControlT<HeaderControl>
     {
-        HeaderControl()
-        {
-            // Xaml objects should not call InitializeComponent during construction.
-            // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
-        }
-
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
+        HeaderControl();
+        void btnStart_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        void btnPause_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+        void btnStop_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e);
+    private:
+        winrt::event<Microsoft::UI::Xaml::RoutedEventHandler> m_startRequestedEvent;
     };
 }
 

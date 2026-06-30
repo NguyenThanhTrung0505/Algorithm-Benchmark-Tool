@@ -4,6 +4,17 @@ namespace Algorithm_Benchmark_Tool
     runtimeclass AlgorithmCardControl : Microsoft.UI.Xaml.Controls.UserControl
     {
         AlgorithmCardControl();
-        Int32 MyProperty;
+        String AlgorithmName;
+        static Microsoft.UI.Xaml.DependencyProperty AlgorithmNameProperty{ get; };
+        String Complexity;
+        static Microsoft.UI.Xaml.DependencyProperty ComplexityProperty{ get; };
+        String Best;
+        static Microsoft.UI.Xaml.DependencyProperty BestProperty{ get; };
+        String Avg;
+        static Microsoft.UI.Xaml.DependencyProperty AvgProperty{ get; };
+        String Worst;
+        static Microsoft.UI.Xaml.DependencyProperty WorstProperty{ get; };
+        String Space;
+        static Microsoft.UI.Xaml.DependencyProperty SpaceProperty{ get; };
     }
 }

@@ -12,13 +12,20 @@ using namespace Microsoft::UI::Xaml;
 
 namespace winrt::Algorithm_Benchmark_Tool::implementation
 {
-    int32_t HeaderControl::MyProperty()
+    HeaderControl::HeaderControl()
     {
-        throw hresult_not_implemented();
+        InitializeComponent();
     }
-
-    void HeaderControl::MyProperty(int32_t /* value */)
+    void HeaderControl::btnStart_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& e)
     {
-        throw hresult_not_implemented();
+        m_startRequestedEvent(*this, e);
+    }
+    void HeaderControl::btnPause_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& e)
+    {
+
+    }
+    void HeaderControl::btnStop_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& e)
+    {
+
     }
 }

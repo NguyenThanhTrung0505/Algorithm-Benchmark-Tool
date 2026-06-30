@@ -122,10 +122,12 @@
       <DependentUpon>AlgorithmCardControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="Algorithms.h" />
     <ClInclude Include="AnalyticsChartControl.xaml.h">
       <DependentUpon>AnalyticsChartControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="DataGenerator.h" />
     <ClInclude Include="HeaderControl.xaml.h">
       <DependentUpon>HeaderControl.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -163,10 +165,12 @@
       <DependentUpon>AlgorithmCardControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="Algorithms.cpp" />
     <ClCompile Include="AnalyticsChartControl.xaml.cpp">
       <DependentUpon>AnalyticsChartControl.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="DataGenerator.cpp" />
     <ClCompile Include="HeaderControl.xaml.cpp">
       <DependentUpon>HeaderControl.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -24,9 +24,21 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="DataGenerator.cpp">
+      <Filter>DataAnalytics</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="DataGenerator.h">
+      <Filter>DataAnalytics</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -60,6 +72,9 @@
     </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{869caf97-88e8-464f-ab49-2f78f989b668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataAnalytics">
+      <UniqueIdentifier>{5dd4746f-192c-424c-bced-77c6ddb63d7a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

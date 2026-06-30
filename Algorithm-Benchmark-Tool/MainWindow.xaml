@@ -14,31 +14,41 @@
             <ColumnDefinition Width="320"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <local:SidebarControl Grid.Column="0"/>
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
-        <Grid Padding="0, 0, 0, 20">
+        <local:SidebarControl Grid.Column="0" AlgorithmVisibilityChanged="Sidebar_AlgorithmVisibilityChanged" x:Name="AppSidebar"/>
+        <Grid Grid.Column="1" Padding="0, 0, 0, 20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <local:HeaderControl Grid.Row="0" Margin="0,0,0,20"/>
-            <Grid Grid.Row="1" ColumnSpacing="20" RowSpacing="20" Padding="20,0,20,20">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <local:AlgorithmCardControl Grid.Row="0" Grid.Column="0"/>
-                <local:AlgorithmCardControl Grid.Row="0" Grid.Column="1"/>
-                <local:AlgorithmCardControl Grid.Row="1" Grid.Column="0"/>
-                <local:AlgorithmCardControl Grid.Row="1" Grid.Column="1"/>
-            </Grid>
-                <local:AnalyticsChartControl Grid.Row="2" Padding="20" Margin="20, 20, 20, 10"/>
+            <local:HeaderControl Grid.Row="0" Margin="0,0,0,20" x:Name="AppHeader"/>
+            <ScrollViewer 
+                x:Name="ScrollViewer"
+                HorizontalScrollMode="Enabled" 
+                VerticalScrollMode="Enabled" 
+                HorizontalScrollBarVisibility="Visible"
+                VerticalScrollBarVisibility="Auto"
+                Grid.Row="1"
+            >
+                <StackPanel Padding="20,0,20,20">
+                    <Grid  ColumnSpacing="20" RowSpacing="20" Padding="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <local:AlgorithmCardControl x:Name="CardBubbleSort" Visibility="Collapsed" Grid.Row="0" Grid.Column="0" AlgorithmName="Bubble Sort" Complexity="O(n²)" Best="O(n)" Avg="O(n^2)" Worst="O(n^2)" Space="O(1)"/>
+                        <local:AlgorithmCardControl x:Name="CardInsertionSort" Visibility="Collapsed" Grid.Row="0" Grid.Column="1" AlgorithmName="Insertion Sort" Complexity="O(n²)" Best="O(n)" Avg="O(n^2)" Worst="O(n^2)" Space="O(1)"/>
+                        <local:AlgorithmCardControl x:Name="CardQuickSort" Visibility="Collapsed" Grid.Row="1" Grid.Column="0" AlgorithmName="Quick Sort" Complexity="O(n log n)" Best="O(n log n)" Avg="O(n log n)" Worst="O(n^2)" Space="O(log n)"/>
+                        <local:AlgorithmCardControl x:Name="CardMergeSort" Visibility="Collapsed" Grid.Row="1" Grid.Column="1" AlgorithmName="Merge Sort" Complexity="O(n log n)" Best="O(n log n)" Avg="O(n log n)" Worst="O(n log n)" Space="O(n)"/>
+                        <local:AlgorithmCardControl x:Name="CardShellSort" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" AlgorithmName="Shell Sort" Complexity="O(n log²n) ~ O(n¹·⁵)" Best="O(n log n)" Avg="O(n log^2 n) ~ O(n^1.5)" Worst="O(n^2)" Space="O(1)"/>
+                    </Grid>
+                    <local:AnalyticsChartControl Margin="20, 20, 20, 10" x:Name="AppChart"/>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
-        </ScrollViewer>
     </Grid>
 </Window>
