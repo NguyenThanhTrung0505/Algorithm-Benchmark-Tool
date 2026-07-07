@@ -1,8 +1,0 @@
-namespace Algorithm_Benchmark_Tool
-{
-    [default_interface]
-    runtimeclass HeaderControl : Microsoft.UI.Xaml.Controls.UserControl
-    {
-        HeaderControl();
-    }
-}
